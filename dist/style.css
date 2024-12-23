@@ -1,0 +1,46 @@
+@import "https://unpkg.com/open-props" layer(design.system);
+
+@import "https://unpkg.com/open-props/normalize.min.css" layer(demo.support);
+
+@layer design.system, demo.support;
+
+@layer demo {
+
+  .colors-mixed {
+
+    background: color-mix(
+
+      in var(--colorspace, oklab) var(--interp, ),
+
+      var(--color-1, #04ff00), 
+
+      var(--color-2, #00ffff) var(--color-2-amount, 50%)
+
+    );
+
+  }
+
+  input[type="range"] {
+
+    background: linear-gradient(
+
+      to right 
+
+      in var(--colorspace, oklab) var(--interp, ),
+
+      var(--color-1, #04ff00), 
+
+      var(--color-2, #00ffff)
+
+    );
+
+  }
+
+}
+
+@layer demo.support {
+
+  body {
+
+    display: grid;
+    
